@@ -1,0 +1,7 @@
+{
+"date_of_birth": "",
+"approved": "true",
+"licence_Driver": "Ok com a licença",
+"doc_Car": "Ok com o Documento",
+"car_insurance": "Ok com o Seguro"
+}
