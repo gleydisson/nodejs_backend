@@ -36,11 +36,11 @@ const UserSchema = new mongoose.Schema({
     },
     administrator: {
         type: String,
-        require: true,
+        require: false,
     },
     driver: {
         type: Boolean,
-        require: true,
+        require: false,
     },
     
 });
