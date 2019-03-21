@@ -7,7 +7,7 @@ const nodemailer = require("nodemailer"); // criado por mim
 
 const authConfig = require('../../config/auth');
 
-const Users = require('../models/User');
+const Usuarios = require('../models/User');
 
 const router = express.Router();
 
@@ -22,10 +22,10 @@ router.post('/register', async (req, res) => {
     const { email } = req.body;
     
     try {
-        if (await Users.findOne({ email }))
+        if (await Usuarios.findOne({ email }))
             return res.status(400).send({ error: 'User already exists' });
         
-            const user = await Users.create(req.body);
+            const user = await Usuarios.create(req.body);
 
         user.password = undefined;
 
@@ -42,7 +42,7 @@ router.post('/register', async (req, res) => {
 router.post('/authenticate', async (req, res) => {
     const { email, password } = req.body;
 
-    const user = await Users.findOne({ email }).select('+password');
+    const user = await Usuarios.findOne({ email }).select('+password');
 
     if (!user)
       return res.status(400).send({ error: 'User not found' });
@@ -67,7 +67,7 @@ router.post('/forgot_password', async ( req, res ) => {
     const { email } = req.body;
 
     try {
-        const user = await Users.findOne({ email });
+        const user = await Usuarios.findOne({ email });
         if (!user)
             return res.status(400).send({ error: 'User not found' });
 
@@ -75,7 +75,7 @@ router.post('/forgot_password', async ( req, res ) => {
     const now = new Date();
     now.setHours(now.getHours() + 1);    
         
-await Users.findByIdAndUpdate(user.id, {
+await Usuarios.findByIdAndUpdate(user.id, {
     '$set': {
         passwordResetToken: token,
         passwordResetExpires: now,
