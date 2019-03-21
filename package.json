@@ -9,9 +9,9 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "dev": "node server.js",
+    "dev": "node src/index.js",
     "build": "next build",
-    "postinstall": "npm run build",
+    "postinstall": "yarn run build",
     "start": "node src/index.js"
   },
   
