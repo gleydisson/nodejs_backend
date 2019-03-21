@@ -2,7 +2,8 @@
   "name": "api-rest",
   "version": "1.0.0",
   "engines": {
-    "node": "11.x"
+    "node": "11.x",
+    "yarn": "1.x"
   },
   "description": "",
   "main": "index.js",
