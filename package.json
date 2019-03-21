@@ -8,19 +8,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "",
-    "dev": "node src/index.js",
-    "build": "next build",
-    "postinstall": "yarn run build",
+    "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
-  
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
@@ -30,5 +25,9 @@
     "nodemailer": "^5.1.1",
     "nodemailer-express-handlebars": "^3.0.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^1.18.9"
   }
 }
