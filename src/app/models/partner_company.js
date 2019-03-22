@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const PartnerSchema = new mongoose.Schema({       
     user: {
         type: mongoose.Schema.Types.ObjectId,        
-        ref:'User',
+        ref:'user',
         require: false,
     },
     company_Name: {

@@ -9,7 +9,7 @@ const DriverSchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,        
-        ref:'User',
+        ref:'user',
         require: false,
     },
     date_of_birth: {
