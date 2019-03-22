@@ -7,7 +7,7 @@ const nodemailer = require("nodemailer"); // criado por mim
 
 const authConfig = require('../../config/auth');
 
-const Usuarios = require('../models/User');
+const Usuarios = require('../models/user');
 
 const router = express.Router();
 
