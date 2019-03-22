@@ -105,7 +105,7 @@ router.post('/reset_password', async (req, res) => {
     const { email, token, password } = req.body;
     
     try {
-        const user = await User.findOne({ email })
+        const user = await Usuarios.findOne({ email })
         .select('+passwordResetToken passwordResetExpires');        
 
         if (!user)
