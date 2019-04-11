@@ -16,7 +16,14 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         select: false,
-    },   
+    }, 
+    
+    Repassword: {
+        type: String,
+        required: true,
+        select: false,
+    }, 
+
     passwordResetToken: {
         type: String,
         select: false,
